@@ -26,7 +26,7 @@ Resources:
 
  HelloFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-    Properties:
+    Properties
       CodeUri: hello_world/
       Handler: app.lambda_handler
       Runtime: python3.8
@@ -36,7 +36,8 @@ Resources:
           Properties:
             Path: /hello
             Method: get
-
+ HelloBucket:
+    Type: AWS::S3::Bucket
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
